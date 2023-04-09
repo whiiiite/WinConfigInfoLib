@@ -1,8 +1,9 @@
-﻿using System;
+using System.Management;
+using WinConfigInfo.Interfaces;
 
 namespace WinConfigInfo
 {
-    public class TemperatureProbeInfo
+    public class TemperatureProbeInfo : IWinConfigInfo
     {
         /// <exception cref="NullReferenceException"/>
         public Int32 Accuracy { get { return (Int32)GetAllInfo()["Accuracy"]; } }
